@@ -63,11 +63,13 @@ To build and run the project, follow these steps:
 
         make
 
-5. **Run the Executable**:
+5. **Run the Executable stored in glfwTrial/build/**:
 
     .. code-block:: bash
 
         ./glfwTrial
+
+.. note:: The CMakeLists.txt file contains the line ``find_package(OpenGL REQUIRED)``, which should bre replaced with Vulkan if using Vulkan instead of OpenGL.
 
 Pre-Written Scripts
 ===================
