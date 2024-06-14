@@ -5,7 +5,8 @@ GLFW X11 Build Example
 This repository provides an example of how to set up and build GLFW for X11 on 
 Wayland platforms. The code ensures that GLFW is correctly configured to use 
 X11, which is necessary for properly rendering the window title bar and icons 
-on some Wayland systems.
+on some Wayland systems.  In this instance we are using OpenGL to provide 
+functionality within the window
 
 Project Structure
 ==================
@@ -68,9 +69,6 @@ To build and run the project, follow these steps:
     .. code-block:: bash
 
         ./glfwTrial
-
-
-.. note:: The CMakeLists.txt file contains the line ``find_package(OpenGL REQUIRED)``, which should bre replaced with Vulkan if using Vulkan instead of OpenGL.
 
 Pre-Written Scripts
 ===================
