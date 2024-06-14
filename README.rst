@@ -44,8 +44,8 @@ To build and run the project, follow these steps:
 
     .. code-block:: bash
 
-        git clone https://github.com/yourusername/glfw-x11-example.git
-        cd glfw-x11-example/glfwTrial
+        git clone https://github.com/Jon-Webb-79/glfwTrial.git
+        cd glfwTrial/glfwTrial
 
 2. **Create a Build Directory and Run CMake**:
 
