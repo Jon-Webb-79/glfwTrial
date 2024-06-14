@@ -1,21 +1,23 @@
 #include <GLFW/glfw3.h>
-#include <iostream>
+#include <stdexcept>
 
 int main(void)
 {
     GLFWwindow* window;
 
     /* Initialize the library */
-    if (!glfwInit())
-        return -1;
+    if (!glfwInit()) {
+        glfwTerminate();
+        throw std::runtime_error("GLFW Initialization Failed!\n");
+    }
+
     glfwWindowHint(GLFW_DECORATED, GLFW_TRUE);
 
-    /* Create a windowed mode window and its OpenGL context */
-    window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
-    if (!window)
-    {
+    window = glfwCreateWindow(640, 480, "Hello World", nullptr, nullptr);
+
+    if (!window){
         glfwTerminate();
-        return -1;
+        throw std::runtime_error("Failed to Create GLFW Window!\n");   
     }
 
     /* Make the window's context current */
@@ -38,6 +40,7 @@ int main(void)
     }
 
     glfwTerminate();
-    return 0;
+
+    return EXIT_SUCCESS;
 }
 

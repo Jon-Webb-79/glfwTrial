@@ -69,6 +69,7 @@ To build and run the project, follow these steps:
 
         ./glfwTrial
 
+
 .. note:: The CMakeLists.txt file contains the line ``find_package(OpenGL REQUIRED)``, which should bre replaced with Vulkan if using Vulkan instead of OpenGL.
 
 Pre-Written Scripts
